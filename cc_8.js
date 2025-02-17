@@ -75,3 +75,16 @@ function filterLargeTransactions(transactions, filterFunction) {
 }
 
 consol.log(filterLargeTransactions(transactions, amount => amount > 1000));
+
+// Task 7 
+function createCartTracker() {
+  let total = 0;
+  return function (amount) {
+    total += amount;
+    return 'Total Cart Value: $${total}';
+  };
+}
+
+let cart = createCartTracker();
+consol.log(cart(20));
+consol.log(cart(35));
