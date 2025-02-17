@@ -66,3 +66,12 @@ function calculateLoanPayment(principal, rate, time) {
 
 consol.log(calculateLoanPayment(1000, 0.05, 2));
 consol.log(calculateLoanPayment(5000, 0.07, 3));
+
+// Task 6 
+let transactions = [200, 1500, 3200, 800, 2500];
+
+function filterLargeTransactions(transactions, filterFunction) {
+  return transactions.filter(filterFunction);
+}
+
+consol.log(filterLargeTransactions(transactions, amount => amount > 1000));
