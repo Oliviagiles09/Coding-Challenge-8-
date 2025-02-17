@@ -35,3 +35,25 @@ let calculateServiceFee = (amount, serviceType) => {
 
 consol.log(calculateServiceFee(200, "Premium"));
 consol.log(calculateServiceFee(500, "Standard"));
+
+// Task 4 
+function calculaterentalCost(days, carType, insurance = false) {
+  let dailyRate = 0;
+  switch (carType) {
+    case 'Economy':
+      dailyRate = 40;
+      break;
+    case 'Standard':
+      dailyRate = 60;
+      break;
+    case 'Luxury':
+      dailyRate = 100;
+      break;
+  }
+  let insuranceCost = insurance ? 20 : 0;
+  let totalCost = (dailyRate + insuranceCost) * days;
+  return 'Total Rental Cost: $${totalCost}';
+}
+
+consol.log(calculateRentalCost(3, "Economy", true));
+consol.log(calculateRentalCost(5, "Luxury", false));
