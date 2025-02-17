@@ -88,3 +88,14 @@ function createCartTracker() {
 let cart = createCartTracker();
 consol.log(cart(20));
 consol.log(cart(35));
+
+// Task 8 
+function calculateSavings(years, amount) {
+  if (years < 10) {
+    return calculateSavings(years + 1, amount * 1.05);
+  }
+  return 'Projected Savings: $${amount.toFixed(2)}';
+};
+
+consol.log(calculateSavings(8, 1000));
+consol.log(calculateSavings(5, 5000));
